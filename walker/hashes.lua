@@ -34,6 +34,7 @@ local hashes = {
   trigger_info = hash 'trigger_info',
   trigger_response = hash 'trigger_response',
   unfollow_camera_rotation = hash 'unfollow_camera_rotation',
+  walker_apply_velocity = hash 'walker_apply_velocity',
   walker_crouching = hash 'walker_crouching',
   walker_falling = hash 'walker_falling',
   walker_here = hash 'walker_here',

@@ -17,3 +17,4 @@ log.txt
 # TrenchBroom
 /trenchbroom
 **/autosave/*.map
+/.editor_settings

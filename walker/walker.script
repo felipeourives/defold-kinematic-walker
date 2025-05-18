@@ -4,6 +4,8 @@
 
   Copyright (c) 2022 Roman Silin
   MIT license. See LICENSE for details.
+
+
 --]]
 
 local hashes = require 'walker.hashes'
@@ -862,5 +864,7 @@ function on_message(self, message_id, message, sender)
     self.position = message.position
   elseif message_id == hashes.pause then
     self.pause = message.is_paused
+  elseif message_id == hashes.walker_apply_velocity then
+    self.velocity = self.velocity + message.velocity
   end
 end

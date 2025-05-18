@@ -15,7 +15,8 @@ function init(self)
   self.urls = {
     go = msg.url('.'),
     gui = msg.url('gui'),
-    operator = msg.url('/player/operator/operator')
+    operator = msg.url('/player/operator/operator'),
+    walker = msg.url('/player/dummy/dummy#walker')
   }
 
   self.is_gui_enabled = true
@@ -30,5 +31,7 @@ function on_input(self, action_id, action)
   elseif action_id == hash 'key_h' and action.released then
     self.is_gui_enabled = not self.is_gui_enabled
     msg.post(self.urls.gui, self.is_gui_enabled and hash 'enable' or hash 'disable')
+  elseif action_id == hash 'key_g' and action.released then
+    msg.post(self.urls.walker, hashes.walker_apply_velocity, { velocity = vmath.vector3(10, 10, 0) } )
   end
 end
